@@ -119,3 +119,17 @@ npm run-script build-app
 cd ./ITMOproctor/db
 node import.js users.json
 ```
+
+### Модуль оповещения об экзаменах
+
+Для запуска модуля оповещения об экзаменах использовать команду: JOB_TYPES=test node worker.js.
+Для запуска других файлов с "работами" вместо "test" перечислить их названия через запятую.
+
+Основная документация по испоьзуемым модулям:
+- Agenda - https://github.com/rschmukler/agenda
+- Nodemailer - https://github.com/nodemailer/nodemailer и https://nodemailer.com/
+- Node Email Templates - https://github.com/niftylettuce/node-email-templates
+
+Все разрабатываемые файлы с "работами" для Agenda необходимо помещать в lib/jobs.
+
+Шаблоны почтовых сообщений в каталог lib/templates/папка_шаблона.
